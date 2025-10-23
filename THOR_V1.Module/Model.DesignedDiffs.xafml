@@ -5,7 +5,11 @@
   </BOModel>
   <NavigationItems>
     <Items>
-      <Item Id="Master Lists" Index="0" />
+      <Item Id="Master Lists" Index="0">
+        <Items>
+          <Item Id="Item_ListView" Index="0" />
+        </Items>
+      </Item>
     </Items>
   </NavigationItems>
   <Options>
