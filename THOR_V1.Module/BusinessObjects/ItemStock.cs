@@ -50,16 +50,34 @@ namespace THOR_V1.Module.BusinessObjects
         //    this.PersistentProperty = "Paid";
         //}
 
-        // 👉 Quan hệ n-1: ItemStock thuộc về một Item
         private Item _item;
-        [DevExpress.Xpo.Association("Item-ItemStocks")]
         [XafDisplayName("Item Code")]
         [ModelDefault("Index", "0")]
         [ImmediatePostData] // để cập nhật thuộc tính phụ khi chọn Item
         public Item ItemID
         {
             get => _item;
-            set => SetPropertyValue(nameof(ItemID), ref _item, value);
+            set
+            {
+                if (_item == value)
+                    return;
+
+                var prevItem = _item;
+                _item = value;
+
+                if (IsLoading)
+                    return;
+
+                // Hủy liên kết cũ
+                if (prevItem != null && prevItem.ItemStockID == this)
+                    prevItem.ItemStockID = null;
+
+                // Gán liên kết mới
+                if (_item != null)
+                    _item.ItemStockID = this;
+
+                OnChanged(nameof(ItemID));
+            }
         }
         [ModelDefault("Index", "1")]
         [XafDisplayName("Description")]

@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 
 namespace THOR_V1.Module.BusinessObjects
@@ -78,11 +79,35 @@ namespace THOR_V1.Module.BusinessObjects
             get => _description;
             set => SetPropertyValue(nameof(Description), ref _description, value);
         }
-        // Quan hệ ngược lại: Một Item có nhiều ItemStock
-        [Association("Item-ItemStocks")]
-        public XPCollection<ItemStock> ItemStocks
+        
+        private ItemStock _itemStock;
+        [VisibleInDetailView(false)] // Ẩn trong DetailView
+        [VisibleInListView(false)]   // Ẩn trong ListView
+        [VisibleInLookupListView(false)] // Ẩn trong lookup
+        public ItemStock ItemStockID
         {
-            get { return GetCollection<ItemStock>(nameof(ItemStocks)); }
+            get => _itemStock;
+            set
+            {
+                if (_itemStock == value)
+                    return;
+
+                var prevStock = _itemStock;
+                _itemStock = value;
+
+                if (IsLoading)
+                    return;
+
+                // Hủy liên kết cũ
+                if (prevStock != null && prevStock.ItemID == this)
+                    prevStock.ItemID = null;
+
+                // Gán liên kết mới
+                if (_itemStock != null)
+                    _itemStock.ItemID = this;
+
+                OnChanged(nameof(ItemStockID));
+            }
         }
 
     }
