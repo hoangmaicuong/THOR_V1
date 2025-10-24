@@ -126,6 +126,39 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <DetailView Id="ItemStock_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="54.8582995951417">
+            <LayoutGroup Id="ItemStock" RelativeSize="100">
+              <LayoutGroup Id="ItemStock_col1" RelativeSize="49.92248062015504">
+                <LayoutItem Id="ItemID" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="ItemDescription" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="BOMQty" Index="2" RelativeSize="10.344827586206897" />
+                <LayoutItem Id="PriceAVG" ViewItem="PriceAVG" Index="3" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="TotalIssue" ViewItem="TotalIssue" Index="4" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="TotalReceipt" ViewItem="TotalReceipt" Index="5" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="StockQty" ViewItem="StockQty" Index="6" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="Suplier" ViewItem="Suplier" Index="7" RelativeSize="10.344827586206897" IsNewNode="True" />
+                <LayoutItem Id="PurDate" Index="8" RelativeSize="13.793103448275861" />
+                <LayoutItem Id="ItemImage" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ItemStock_col2" RelativeSize="50.07751937984496" Caption="ItemStock_col2">
+                <LayoutItem Id="ItemImage" ViewItem="ItemImage" Index="0" RelativeSize="100" ShowCaption="False" IsNewNode="True" />
+                <LayoutItem Id="PriceAVG" Index="1" RelativeSize="84.61538461538461" Removed="True" />
+                <LayoutItem Id="StockQty" Index="1" RelativeSize="17.647058823529413" Removed="True" />
+                <LayoutItem Id="Suplier" Index="1" RelativeSize="15" Removed="True" />
+                <LayoutItem Id="TotalIssue" Index="1" RelativeSize="13.043478260869565" Removed="True" />
+                <LayoutItem Id="TotalReceipt" Index="1" RelativeSize="15" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="PurchasingHistories_Group" Direction="Vertical" RelativeSize="45.1417004048583">
+            <LayoutItem Id="PurchasingHistories" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="ItemStock_ListView" IsFooterVisible="True" AllowEdit="True">
       <Columns>
         <ColumnInfo Id="ItemID" Width="113">
