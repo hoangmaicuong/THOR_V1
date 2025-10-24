@@ -1,4 +1,5 @@
 ﻿using DevExpress.Data.Filtering;
+using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
@@ -447,6 +448,7 @@ namespace THOR_V1.Module.BusinessObjects
 
 
     }
+
     [System.ComponentModel.DefaultProperty("CustPO")]
     [DefaultClassOptions, ImageName("BO_Product")]
     [NavigationItem(GroupName = "Customer Order Entry")]
@@ -663,14 +665,14 @@ namespace THOR_V1.Module.BusinessObjects
             set { forCustomer = value; }
         }
 
-        //[Association("PODetail-PO", typeof(PODetail))]
-        //public XPCollection PODetails
-        //{
-        //    get
-        //    {
-        //        return GetCollection("PODetails");
-        //    }
-        //}
+        [Association("PODetail-PO", typeof(PODetail))]
+        public XPCollection PODetails
+        {
+            get
+            {
+                return GetCollection("PODetails");
+            }
+        }
 
         public bool POClosed
         {
@@ -1033,6 +1035,7 @@ namespace THOR_V1.Module.BusinessObjects
 
         }
     }
+
     [System.ComponentModel.DefaultProperty("CancelPONum")]
     [DefaultClassOptions, ImageName("BO_Product")]
     [NavigationItem(GroupName = "Customer Order Entry")]
@@ -1422,13 +1425,13 @@ namespace THOR_V1.Module.BusinessObjects
     [RuleCriteria("PO Qty is greater than 0", DefaultContexts.Save, "Qty > 0", "PO Qty is greater than 0", SkipNullOrEmptyValues = false)]
     [System.ComponentModel.DefaultProperty("UniqueName")]
     [DefaultClassOptions, ImageName("BO_Product")]
-    //[DefaultListViewOptions(true, NewItemRowPosition.None)]
+    [DefaultListViewOptions(true, NewItemRowPosition.None)]
     [NavigationItem(GroupName = "Customer Order Entry")]
     public class PODetail : BaseObject
     {
         private PO poID;
         private Item itemID;
-        //private Component componentID;
+        private Component componentID;
 
 
         private int qty;
@@ -1448,13 +1451,13 @@ namespace THOR_V1.Module.BusinessObjects
 
         public PODetail(Session session) : base(session) { }
 
-        //[Association("PODetail-PO", typeof(PO))] //ok
-        //public PO POID
-        //{
-        //    get { return poID; }
-        //    set { poID = value; }
-        //}
-        //// [RuleRequiredField("PO Item is required", DefaultContexts.Save, "PO Item is required")]
+        [Association("PODetail-PO", typeof(PO))] //ok
+        public PO POID
+        {
+            get { return poID; }
+            set { poID = value; }
+        }
+        // [RuleRequiredField("PO Item is required", DefaultContexts.Save, "PO Item is required")]
         [Association("PODetail-Item", typeof(Item))] //ok
         public Item ItemID
         {
@@ -1462,11 +1465,11 @@ namespace THOR_V1.Module.BusinessObjects
             set { itemID = value; }
         }
 
-        //public Component ComponentID
-        //{
-        //    get { return componentID; }
-        //    set { componentID = value; }
-        //}
+        public Component ComponentID
+        {
+            get { return componentID; }
+            set { componentID = value; }
+        }
 
         [Size(255)]
         public DateTime RequestDate
@@ -1633,17 +1636,17 @@ namespace THOR_V1.Module.BusinessObjects
         }
         [Persistent]
         //[RuleUniqueValue("", DefaultContexts.Save, CriteriaEvaluationBehavior = CriteriaEvaluationBehavior.BeforeTransaction)]
-        //public String UniqueName
-        //{
-        //    get
-        //    {
-        //        if (POID == null)
-        //            return ItemID == null ? "" : ItemID.ToString();
-        //        else
-        //            return POID.ToString() + '-' + (ItemID == null ? "" : ItemID.ToString());
-        //    }
+        public String UniqueName
+        {
+            get
+            {
+                if (POID == null)
+                    return ItemID == null ? "" : ItemID.ToString();
+                else
+                    return POID.ToString() + '-' + (ItemID == null ? "" : ItemID.ToString());
+            }
 
-        //}
+        }
         [Size(255)]
         public String SpecialRequest
         {
@@ -1728,6 +1731,7 @@ namespace THOR_V1.Module.BusinessObjects
             }*/
         }
     }
+
     [System.ComponentModel.DefaultProperty("InvoiceNum")]
     [DefaultClassOptions, ImageName("BO_Product")]
     [NavigationItem(GroupName = "Customer Order Entry")]

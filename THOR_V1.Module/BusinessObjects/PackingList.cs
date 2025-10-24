@@ -326,4 +326,5 @@ namespace THOR_V1.Module.BusinessObjects
             base.OnSaving();
         }
     }
+
 }

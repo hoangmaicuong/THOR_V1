@@ -20,5 +20,102 @@
   </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Item_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="81.81818181818181">
+            <LayoutGroup Id="Item" RelativeSize="100">
+              <LayoutGroup Id="Item_col1" RelativeSize="50.40387722132472">
+                <LayoutItem Id="IsEdit" RelativeSize="6.2745098039215685" Index="0" />
+                <LayoutItem Id="IsForComponent" RelativeSize="4.705882352941177" Index="1" />
+                <LayoutItem Id="ItemMode" RelativeSize="4.705882352941177" Index="2" />
+                <LayoutItem Id="ComponentCategoryID" RelativeSize="4.705882352941177" Index="3" />
+                <LayoutItem Id="ItemCode" RelativeSize="4.705882352941177" Index="4" />
+                <LayoutItem Id="ItemClassID" RelativeSize="4.705882352941177" Index="5" />
+                <LayoutItem Id="BrandListID" RelativeSize="4.705882352941177" Index="6" />
+                <LayoutItem Id="CustSKU" RelativeSize="4.705882352941177" Index="7" />
+                <LayoutItem Id="SKUName" RelativeSize="4.705882352941177" Index="8" />
+                <LayoutItem Id="Description" ViewItem="Description" Index="9" RelativeSize="16.862745098039216" IsNewNode="True" />
+                <LayoutItem Id="CNTLACCTID" ViewItem="CNTLACCTID" Index="10" RelativeSize="4.705882352941177" IsNewNode="True" />
+                <LayoutItem Id="CategoryID" ViewItem="CategoryID" Index="11" RelativeSize="4.705882352941177" IsNewNode="True" />
+                <LayoutItem Id="UnitID" RelativeSize="4.705882352941177" Index="12" />
+                <LayoutItem Id="W_mm" RelativeSize="4.705882352941177" Index="13" />
+                <LayoutItem Id="H_mm" RelativeSize="4.705882352941177" Index="14" />
+                <LayoutItem Id="D_mm" RelativeSize="4.705882352941177" Index="15" />
+                <LayoutItem Id="Inch" ViewItem="Inch" Index="16" RelativeSize="4.705882352941177" IsNewNode="True" />
+                <LayoutItem Id="THFinishCodeVersion" ViewItem="THFinishCodeVersion" Index="17" RelativeSize="6.2745098039215685" IsNewNode="True" />
+                <LayoutItem Id="IImage" RelativeSize="9.090909090909092" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item_col2" RelativeSize="49.59612277867528">
+                <LayoutItem Id="IImage" ViewItem="IImage" Index="0" RelativeSize="6.2745098039215685" ShowCaption="False" IsNewNode="True" />
+                <LayoutItem Id="CategoryID" RelativeSize="6.818181818181818" Index="1" Removed="True" />
+                <LayoutItem Id="CNTLACCTID" RelativeSize="6.382978723404255" Index="1" Removed="True" />
+                <LayoutItem Id="Inch" RelativeSize="7.317073170731708" Index="1" Removed="True" />
+                <LayoutItem Id="DisContinue" RelativeSize="89.01960784313725" Index="2" />
+                <LayoutItem Id="THFinishCodeVersion" RelativeSize="86" Index="2" Removed="True" />
+                <LayoutItem Id="LastMaintanted" RelativeSize="6.818181818181818" Index="6" Removed="True" />
+                <LayoutItem Id="THCompositeFinishName" RelativeSize="43.18181818181818" Index="8" Removed="True" />
+                <LayoutItem Id="AdditionalItemInfo1" RelativeSize="6.818181818181818" Removed="True" />
+                <LayoutItem Id="CreateDate" RelativeSize="29.545454545454547" Removed="True" />
+                <LayoutItem Id="DEFPRICLSTID" RelativeSize="6.818181818181818" Removed="True" />
+                <LayoutItem Id="ITEMBRKID" RelativeSize="6.818181818181818" Removed="True" />
+                <LayoutItem Id="Name" RelativeSize="22.727272727272727" Removed="True" />
+                <LayoutItem Id="Parent" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="0.14903129657228018" Caption="Description">
+            <LayoutItem Id="Description" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="18.0327868852459">
+            <LayoutGroup Id="BillsOfMaterials" RelativeSize="100">
+              <LayoutItem Id="BillsOfMaterials" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="BillsOfMaterialDetails" RelativeSize="100">
+              <LayoutItem Id="BillsOfMaterialDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ComponentItems" Index="2" ShowCaption="True" RelativeSize="100" IsNewNode="True" Removed="True">
+              <LayoutItem Id="ComponentItems" ViewItem="ComponentItems" ShowCaption="False" RelativeSize="100" Index="0" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="BOMPackings" RelativeSize="100" Index="3">
+              <LayoutItem Id="BOMPackings" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="BOMPackingDetails" RelativeSize="100" Index="4">
+              <LayoutItem Id="BOMPackingDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="DetailImagess" RelativeSize="100" Index="5">
+              <LayoutItem Id="DetailImagess" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ItemFinishLists" RelativeSize="100" Index="6">
+              <LayoutItem Id="ItemFinishLists" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ItemPriceHistories" RelativeSize="100" Index="7">
+              <LayoutItem Id="ItemPriceHistories" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PODetails" RelativeSize="100" Index="8">
+              <LayoutItem Id="PODetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ShipmentDetails" RelativeSize="100" Index="9">
+              <LayoutItem Id="ShipmentDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ItemPacks" RelativeSize="100" Index="10" Removed="True">
+              <LayoutItem Id="ItemPacks" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Tags" RelativeSize="100" Index="11" Removed="True">
+              <LayoutItem Id="Tags" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ProformaInvoiceDetails" RelativeSize="100" Index="12" Removed="True">
+              <LayoutItem Id="ProformaInvoiceDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="CommercialInvoiceDetails" RelativeSize="100" Index="13" Removed="True">
+              <LayoutItem Id="CommercialInvoiceDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PackingListDetails" RelativeSize="100" Index="14" Removed="True">
+              <LayoutItem Id="PackingListDetails" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

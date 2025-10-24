@@ -564,6 +564,7 @@ namespace THOR_V1.Module.BusinessObjects
             }
         }
     }
+
     [System.ComponentModel.DefaultProperty("Sheen")]
     [DefaultClassOptions, ImageName("Action_ChooseSkin")]
     [NavigationItem(GroupName = "Finishing")]

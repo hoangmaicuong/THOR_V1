@@ -248,6 +248,7 @@ namespace THOR_V1.Module.BusinessObjects
 
         private String _description;
         [Size(300)]
+        [ModelDefault("RowCount", "5")]
         public String Description
         {
             get => _description;
@@ -395,7 +396,7 @@ namespace THOR_V1.Module.BusinessObjects
             get => _createDate;
             set => SetPropertyValue(nameof(CreateDate), ref _createDate, value);
         }
-
+        [XafDisplayName("BOM")]
         [Association("Item-BillsOfMaterial", typeof(BillsOfMaterial))]
         public XPCollection BillsOfMaterials
         {
@@ -404,7 +405,7 @@ namespace THOR_V1.Module.BusinessObjects
                 return GetCollection("BillsOfMaterials");
             }
         }
-
+        [XafDisplayName("BOM Detail")]
         [Association("Item-BillsOfMaterialDetail", typeof(BillsOfMaterialDetail))]
         public XPCollection BillsOfMaterialDetails
         {
@@ -540,7 +541,10 @@ namespace THOR_V1.Module.BusinessObjects
         public ITreeNode Parent => null;
 
         //public IBindingList Children => BillsOfMaterials;
-
+        [Browsable(false)]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(false)]
         public IBindingList Children
         {
             get
