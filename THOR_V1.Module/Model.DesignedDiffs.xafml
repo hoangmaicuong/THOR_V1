@@ -135,5 +135,7 @@
         </ColumnInfo>
       </Columns>
     </ListView>
+    <ListView Id="ItemStock_PurchasingHistories_ListView" AllowEdit="True" />
+    <ListView Id="PurchasingHistory_ListView" AllowEdit="True" />
   </Views>
 </Application>
