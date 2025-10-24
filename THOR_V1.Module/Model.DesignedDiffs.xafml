@@ -8,6 +8,15 @@
       <Item Id="Master Lists" Index="0">
         <Items>
           <Item Id="Item_ListView" Index="0" />
+          <Item Id="ItemStock_ListView" Index="1" />
+          <Item Id="BillsOfMaterial_ListView" Index="2" />
+          <Item Id="BillsOfMaterialDetail_ListView" Index="3" />
+          <Item Id="BOMPacking_ListView" Index="4" />
+          <Item Id="BOMPackingDetail_ListView" Index="5" />
+          <Item Id="BOMVersion_ListView" Index="6" />
+          <Item Id="ComponentItem_ListView" Index="7" />
+          <Item Id="DetailImages_ListView" Index="8" />
+          <Item Id="ItemPack_ListView" Index="9" />
         </Items>
       </Item>
     </Items>
