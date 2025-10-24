@@ -126,5 +126,10 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="ItemStock_ListView">
+      <Columns>
+        <ColumnInfo Id="ItemID" Width="113" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

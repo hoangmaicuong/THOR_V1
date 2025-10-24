@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -82,6 +83,27 @@ namespace THOR_V1.Module.BusinessObjects
         [ModelDefault("Index", "1")]
         [XafDisplayName("Description")]
         public string ItemDescription => ItemID?.Description;
+
+        [NonPersistent]
+        [ImageEditor(
+            ListViewImageEditorMode = ImageEditorMode.PictureEdit,
+            DetailViewImageEditorMode = ImageEditorMode.PictureEdit,
+            ListViewImageEditorCustomHeight = 60)]
+        [XafDisplayName("Item Image")]
+        public byte[] ItemImage
+        {
+            get
+            {
+                if (ItemID?.IImage == null)
+                    return null;
+
+                using (var ms = new MemoryStream())
+                {
+                    ItemID.IImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    return ms.ToArray();
+                }
+            }
+        }
 
         private int _BOMQty;
         public int BOMQty
