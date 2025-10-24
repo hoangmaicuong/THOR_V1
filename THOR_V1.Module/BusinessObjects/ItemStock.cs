@@ -18,7 +18,7 @@ namespace THOR_V1.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [NavigationItem(GroupName = "Master Lists")]
-    [ImageName("BO_Product")]
+    [ImageName("Demo_SalesOverview")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]

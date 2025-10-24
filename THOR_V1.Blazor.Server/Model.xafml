@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application>
-  <Options UIType="TabbedMDI"
-         RestoreTabbedMdiLayout="True"
-         ShowTabImage="True">
-  </Options>
-  <NavigationItems NavigationStyle="Accordion">
-  </NavigationItems>
+<Application Logo="SelectDataSource" Title="THOR">
+  <NavigationItems NavigationStyle="Accordion" />
+  <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="24.2.7.0" IsNewNode="True" />
+  </SchemaModules>
 </Application>

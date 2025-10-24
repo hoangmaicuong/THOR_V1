@@ -5,10 +5,10 @@
   </BOModel>
   <NavigationItems>
     <Items>
-      <Item Id="Master Lists" Index="0">
+      <Item Id="Master Lists" Index="0" ImageName="BO_Product_Group">
         <Items>
           <Item Id="Item_ListView" Index="0" />
-          <Item Id="ItemStock_ListView" Index="1" />
+          <Item Id="ItemStock_ListView" Index="1" ImageName="Demo_SalesOverview" />
           <Item Id="BillsOfMaterial_ListView" Index="2" />
           <Item Id="BillsOfMaterialDetail_ListView" Index="3" />
           <Item Id="BOMPacking_ListView" Index="4" />
@@ -126,9 +126,13 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="ItemStock_ListView">
+    <ListView Id="ItemStock_ListView" IsFooterVisible="True" AllowEdit="True">
       <Columns>
-        <ColumnInfo Id="ItemID" Width="113" />
+        <ColumnInfo Id="ItemID" Width="113">
+          <Summary>
+            <ColumnSummaryItem Id="Summary0" SummaryType="Count" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
       </Columns>
     </ListView>
   </Views>
