@@ -683,6 +683,12 @@ namespace THOR_V1.Module.BusinessObjects
                 OnChanged(nameof(ItemStockID));
             }
         }
+        // ✅ Quan hệ 1-n: Một ItemStock có nhiều PurchasingHistory
+        [DevExpress.Xpo.Association("Item-PurchasingHistories")]
+        public XPCollection<PurchasingHistory> PurchasingHistories
+        {
+            get { return GetCollection<PurchasingHistory>(nameof(PurchasingHistories)); }
+        }
     }
 
     [System.ComponentModel.DefaultProperty("ShortName")]

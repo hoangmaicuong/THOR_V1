@@ -17,8 +17,8 @@ using System.Text;
 namespace THOR_V1.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [NavigationItem(false)] // 👈 Không tạo mục menu
-    //[ImageName("BO_Contact")]
+    //[NavigationItem(false)] // 👈 Không tạo mục menu
+    [ImageName("BO_Product")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
@@ -63,9 +63,16 @@ namespace THOR_V1.Module.BusinessObjects
             get => _itemStock;
             set => SetPropertyValue(nameof(ItemStockID), ref _itemStock, value);
         }
+
+        private Item _item;
+
+        [DevExpress.Xpo.Association("Item-PurchasingHistories")]
         [XafDisplayName("Item Code")]
-        [VisibleInDetailView(false)] // Ẩn trong DetailView
-        public string ItemCode => ItemStockID?.ItemID?.ItemCode;
+        public Item ItemID
+        {
+            get => _item;
+            set => SetPropertyValue(nameof(ItemID), ref _item, value);
+        }
 
         private string _poNum;
         public string PONum
