@@ -19,6 +19,17 @@
           <Item Id="ItemPack_ListView" Index="9" />
         </Items>
       </Item>
+      <Item Id="Customer Order Entry" Removed="True" />
+      <Item Id="Default">
+        <Items>
+          <Item Id="Department_ListView" Removed="True" />
+          <Item Id="Employee_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Finishing" Removed="True" />
+      <Item Id="Lists Archive" Removed="True" />
+      <Item Id="Purchasing Order" Removed="True" />
+      <Item Id="Turn Over Slip" Index="" Removed="True" />
     </Items>
   </NavigationItems>
   <Options>
