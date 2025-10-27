@@ -17,6 +17,7 @@
           <Item Id="ComponentItem_ListView" Index="7" />
           <Item Id="DetailImages_ListView" Index="8" />
           <Item Id="ItemPack_ListView" Index="9" />
+          <Item Id="PurchasingHistory_ListView" ViewId="PurchasingHistory_ListView" ObjectKey="" IsNewNode="True" />
         </Items>
       </Item>
       <Item Id="Customer Order Entry" Removed="True" />
@@ -24,6 +25,7 @@
         <Items>
           <Item Id="Department_ListView" Removed="True" />
           <Item Id="Employee_ListView" Removed="True" />
+          <Item Id="PurchasingHistory_ListView" Removed="True" />
         </Items>
       </Item>
       <Item Id="Finishing" Removed="True" />
