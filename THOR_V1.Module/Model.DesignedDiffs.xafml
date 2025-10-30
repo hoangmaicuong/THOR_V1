@@ -8,7 +8,7 @@
       <Item Id="Master Lists" Index="0" ImageName="BO_Product_Group">
         <Items>
           <Item Id="Item_ListView" Index="0" />
-          <Item Id="ItemStock_ListView" Index="1" ImageName="Demo_SalesOverview" />
+          <Item Id="ItemStock_ListView" Index="1" ImageName="Demo_SalesOverview" Removed="True" />
           <Item Id="BillsOfMaterial_ListView" Index="2" />
           <Item Id="BillsOfMaterialDetail_ListView" Index="3" />
           <Item Id="BOMPacking_ListView" Index="4" />
@@ -17,6 +17,11 @@
           <Item Id="ComponentItem_ListView" Index="7" />
           <Item Id="DetailImages_ListView" Index="8" />
           <Item Id="ItemPack_ListView" Index="9" />
+        </Items>
+      </Item>
+      <Item Id="Group Inventory" Caption="Group Inventory" Index="1" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ItemStock_ListView" Index="1" ViewId="ItemStock_ListView" ObjectKey="" IsNewNode="True" />
           <Item Id="PurchasingHistory_ListView" ViewId="PurchasingHistory_ListView" ObjectKey="" IsNewNode="True" />
         </Items>
       </Item>
