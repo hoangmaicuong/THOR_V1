@@ -316,29 +316,29 @@ namespace THOR_V1.Module.BusinessObjects
         }
 
 
-        private bool approved;
-        public bool Approved
-        {
-            get => approved;
-            set
-            {
-                if (SetPropertyValue(nameof(Approved), ref approved, value))
-                {
-                    if (approved)
-                    {
-                        approvedBy = SecuritySystem.CurrentUserName;
-                        approvedDate = DateTime.Now;
+        //private bool approved;
+        //public bool Approved
+        //{
+        //    get => approved;
+        //    set
+        //    {
+        //        if (SetPropertyValue(nameof(Approved), ref approved, value))
+        //        {
+        //            if (approved)
+        //            {
+        //                approvedBy = SecuritySystem.CurrentUserName;
+        //                approvedDate = DateTime.Now;
 
-                    }
-                    else
-                    {
-                        approvedBy = "";
-                        approvedDate = DateTime.MinValue;
-                    }
+        //            }
+        //            else
+        //            {
+        //                approvedBy = "";
+        //                approvedDate = DateTime.MinValue;
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         private String approvedBy;
         public String ApprovedBy
@@ -454,11 +454,11 @@ namespace THOR_V1.Module.BusinessObjects
             String destinationFile = "";
             String destinationFolder = "";
 
-            if (unApprovedDate == DateTime.MinValue && approvedDate != DateTime.MinValue && approved == false)
-            {
-                unApprovedDate = DateTime.Now;
-                approvedDate = DateTime.MinValue;
-            }
+            //if (unApprovedDate == DateTime.MinValue && approvedDate != DateTime.MinValue && approved == false)
+            //{
+            //    unApprovedDate = DateTime.Now;
+            //    approvedDate = DateTime.MinValue;
+            //}
 
             if (!String.IsNullOrEmpty(SystemFilePath))
             {
