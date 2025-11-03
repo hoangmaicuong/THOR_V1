@@ -47,6 +47,16 @@
   </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Item_BillsOfMaterials_ListView">
+      <Columns>
+        <ColumnInfo Id="VariableCost" Index="-4" />
+        <ColumnInfo Id="FixedCost" Index="-3" />
+        <ColumnInfo Id="ItemID" Index="-1" />
+        <ColumnInfo Id="VersionID" Index="-1" />
+        <ColumnInfo Id="Name" Index="0" />
+        <ColumnInfo Id="IImage" Caption="IImage" PropertyName="ItemID.IImage" Index="1" IsNewNode="True" />
+      </Columns>
+    </ListView>
     <DetailView Id="Item_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
