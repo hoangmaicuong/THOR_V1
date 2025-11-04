@@ -154,6 +154,13 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Item_ListView">
+      <Columns>
+        <ColumnInfo Id="IsEdit" Index="-1" />
+        <ColumnInfo Id="IsForComponent" Index="-1" />
+        <ColumnInfo Id="ItemMode" Index="-1" />
+      </Columns>
+    </ListView>
     <DetailView Id="ItemStock_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
