@@ -5,4 +5,9 @@
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="24.2.7.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <ListView Id="BillsOfMaterial_ListView" EditorTypeName="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
+    <ListView Id="BOMPacking_ListView" EditorTypeName="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
+    <ListView Id="Item_ListView" EditorTypeName="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
+  </Views>
 </Application>
